@@ -90,7 +90,7 @@
           <!-- Date -->
           <span class="date-time info">On
             <span class="date">2019-12-03</span>
-            <span class="time">11:10:21</span>
+            <span class="time">11:19:01</span>
           </span>
           
         </div>
@@ -109,15 +109,25 @@
           <h2 id="Online-Shoppers-Purchasing-Intention-prediction"><a href="#Online-Shoppers-Purchasing-Intention-prediction" class="headerlink" title="Online Shoppers Purchasing Intention prediction"></a><center>Online Shoppers Purchasing Intention prediction</center></h2><p>As the rapid development of Internet system in recent years, and the increasing belief that technology will become the mainstream of feature, machine learning spontaneously becomes a hot topic both in major and career choosing. Machine learning covers knowledge of probability theory, statistics, approximate theory and complex algorithms (stimulating human learning). It allows computers to deal with new situations through analysis, observation, and past experiences. By constantly proposing brand new algorithms, it has been widely used in a variety of fields.<br>Nowadays, with the help of the new technology and the support of the internet, online shopping has gradually developed into the main method for people all around the world for purchasing products for either daily life products or clothes and decorations. It provides customers a wide variety platform for selecting items, not only in a specific store, but from a diverse storage which includes all kinds of related items. Subsequently, online stores, like every business, want to sell as many products as possible, in order to earn profit and eventually extend their store. </p>
 <p>Apparently, the study of consumer preferences, known as propensity to consume, becomes important. Through machine learning, it can effectively improve this problem. I personally is a online shopping lover, so I was attracted by the topic of using computer knowledges to predict online shoppers purchasing intention. Through learning, I used a supervised learning two-class classification ML model and by inserting data into it, successively predicted the results. The dataset provided in this research comes from year-long consecutive surveys based on typical products of online shoppers, which consists of 10 numerical and 8 categorical attributes (informational, bounce rates, page values). We will use the first 17 features to predict whether Revenue is true or false. However, the data set is unbalanced so it is quite challenging since it need process and ways to get the best result. In the following paragraphs, I will explain why and the solutions to solve the problem. After being primarily organized by official statistics, it was shown visibly as a table formation, which audience can effortlessly acquire effective information. By inserting the data given, the model can predict whether a shopper will purchase an item or not. Therefor makes it more effective to produce recommended products for each consumer.</p>
 <p>Data preprocessing and visualization are important programs after obtaining data, it typically includes data cleaning, encoding, separating, and feature scaling. For usual collected data, there is a large probability to contain missing or extreme values, then errors may occur when calculating final result. This process provides advantages and set up preparations for the analysis part following up. Also, by visualizing the data through visualization, contributes a quicker and clearer correlation than just simple text, the overall operation of the product has a significant effect.</p>
-<p><img src="/2019/12/03/Project-Summary/1.png" alt="1"></p>
+<center>General ML Pipeline</center>
+
+<p><img src="/2019/12/03/Project-Summary/1.jpg" alt="1"></p>
 <p>When we make predictions, we must use some measures to evaluate the results provide by the model. For example, we can use confusion matrices. The probability of partial correct classification can be analyzed in detail. If two classification models are used, the first phase inserts the dataset into the model. Then following analysis will gives results and evaluation indicators that can determine whether or not to make an informed decision. The study of ML is of great significance, while the imbalance of the data set is mainly deficiency which brings great challenges to the prediction. It can be solved by adding new metrics to the model to improve accuracy. There are many kinds of charts, static and dynamic, each of these charts is very intuitive and some are even colorful. Each type of chart has its own advantages. For instance, a bar chart is more likely to show the overall distribution and the difference between the highest and lowest points, while a line graph is more likely to show the overall trend.</p>
 <p>After  importing the collected data into coding, we get our data image by running all cells. </p>
 <p><img src="/2019/12/03/Project-Summary/2.png" alt="1"></p>
 <p>Our final goal is to use the data to predict the Revenue, this chart provide a perspicuous and colorful image to represent the result, instead of just number. That there are many people who are visual learners, and charts like this can give a more perceptual intuition. </p>
 <p>Bar charts are best in comparative data cases, since this type of charts is easy to interpret and ubiquitous. It allows people to recognize and compare the difference of each individual data at first sight. Like this chart, it is obvious that the vertex is during May and there is probably a trough in February. </p>
-<p><img src="/2019/12/03/Project-Summary/3.png" alt="Administrative distribution with different labels"></p>
-<p><img src="/2019/12/03/Project-Summary/4.png" alt="Attributes correlation heat map"></p>
-<p><img src="/2019/12/03/Project-Summary/5.png" alt="1"></p>
+<center>Administrative distribution with different label</center>
+
+
+<center class="half">
+    <img src="/2019/12/03/Project-Summary/3.png" width="250"><img src="/2019/12/03/Project-Summary/4.png" width="250">
+</center>
+
+
+<center>Attribute correlation heat map</center>
+
+<p><img src="/2019/12/03/Project-Summary/5.png" alt="5"></p>
 <p>This is a typically method called on-hot coding. The map represents the result by pure color correlations: the lightest straight line ( diagonal ) is the reference standard. </p>
 <p><img src="/2019/12/03/Project-Summary/6.png" alt="Correlation coefficient of 17 features with Revenue  "></p>
 <p>The datas shown above are only a small portion among the huge data sets in our nowadays life. Everyday we interfere with numerous information, base on the purpose to find a way that can provide and select data more efficiently, people come up with the general idea of Feature Engineering. This is the process of using domain knowledge of the data to create or modify features to make machine learning algorithms work. Then we may come to the stage to think: </p>
@@ -145,19 +155,20 @@
 <p><img src="/2019/12/03/Project-Summary/12.png" alt="12"></p>
 <p>Logistic Regression, which is also used in Statistics, it can take any real number and changed them into 0 and 1, in its functional graph ( sigmoid function ). </p>
 <p>The k-nearest neighbors algorithm (KNN) is a method used for classification. KNN model represents the “nearest neighbors algorithm”, used for classifications. The neighbors are taken from a set of objects for which the class is known. The input consists of the k closest training examples in the feature space, the output is a class. An object is classified by a plurality vote of its neighbors, with the object being assigned to the class most common among its k nearest neighbors (k is a positive integer, typically small). If k = 1, then the object is simply assigned to the class of that single nearest neighbor. The neighbors are taken from a set of objects for which the class is known. This can be thought of    as the training set for the algorithm, though no explicit training step is required. </p>
-<p>The test sample (green dot) should be classified either to blue squares or to red triangles. If k = 3 (solid line circle) it is assigned to the red triangles because there are 2 triangles and only 1 square inside the inner circle. If k = 5 (dashed line circle) it is assigned to the blue squares (3 squares vs. 2 triangles inside the outer circle.)</p>
+<p>The test sample (green dot) should be classified either to blue squares or to red triangles. If k = 3 (solid line circle) it is assigned to the red triangles because there are 2 triangles and only 1 square inside the inner circle. If k = 5 (dashed line circle) it is assigned to the blue squares (3 squares vs. 2 triangles inside the outer circle.)<br><img src="/2019/12/03/Project-Summary/13.png" alt="13"></p>
 <ul>
 <li><p>Parameter n_neighbors: the number of neighbors</p>
 </li>
 <li><p>Parameter p: the type of distance</p>
 </li>
+</ul>
+<p><img src="/2019/12/03/Project-Summary/14.png" alt="14"></p>
+<ul>
 <li><p>p = 1:Manhattan Distance                 </p>
 </li>
 <li><p>p = 2: Euclidean distance </p>
 </li>
 </ul>
-<p><img src="/2019/12/03/Project-Summary/13.png" alt="13"></p>
-<p><img src="/2019/12/03/Project-Summary/14.png" alt="14"></p>
 <p><img src="/2019/12/03/Project-Summary/15.png" alt="15"></p>
 <p>The main difference between KNN and Logistic Regression is KNN needs to store every value no matter is the trained data or the new data and distance among them. Since it needs to remember all locations to proceed the measurement, when the data sets get really big or in complex cases, this actually turns the model into a disadvantage. There is too much for the model to process, and the purpose of models is to be concise. Where as Logistic Regression only needs to insert the new viable in the previous data set. </p>
 <p>The training data set has to be different with the new data, since we do not want the model to have bias, for instance it has seen the data before. The way we use before to solve this problem is to assign value to the test and training data. For example set 20% to test, and 80% dat to train. Just like chemistry labs, the value we signed are based on hypotheses, they are not accurate and may actually produce similar results, or in opposite, the result can also be very different. In that way, we user cross-validation to have a more convincible average, and balance the error of the result. The only parameter is K, the repeating time. </p>
